@@ -51,4 +51,40 @@ public class Driver {
                 d = 0;
         }
     }
+
+    public static void findLeastAndMostExpensiveUAV(UAV[] array) {
+        double[] Num = new double[array.length];
+        int maxIndex = 0;
+        int minIndex = 0;
+        for (int i = 0; i < array.length; i++) {
+            Num[i] = array[i].price;
+        }
+        if (array.length > 1) {
+            double maxValue = Num[0];
+            for (int i = 0; i < Num.length; i++) {
+                if (Num[i] > maxValue) {
+                    maxValue = Num[i];
+                    maxIndex = i;
+                }
+            }
+            double minValue = Num[0];
+            for (int i = 0; i < Num.length; i++) {
+                if (Num[i] < minValue) {
+                    minValue = Num[i];
+                    minIndex = i;
+                }
+            }
+            System.out
+                    .println("UAV " + (maxIndex + 1) + " has the highest price. " + array[maxIndex].toString() + "\n");
+            System.out.println("UAV " + (minIndex + 1) + " has the lowest price. " + array[minIndex].toString() + "\n");
+
+        } else if (array.length == 0)
+
+        {
+            System.out.println("There is no objects found in the array.");
+
+        } else if (array.length == 1) {
+            System.out.println("There is only one uav given. " + array[0].toString());
+        }
+    }
 }
