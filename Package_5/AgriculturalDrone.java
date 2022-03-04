@@ -44,7 +44,7 @@ public class AgriculturalDrone extends UAV {
     }
 
     // Getter method carry capacity
-    public int getcCap() {
+    public int getCCap() {
         return this.cCap;
     }
 
@@ -54,7 +54,7 @@ public class AgriculturalDrone extends UAV {
     }
 
     // Setter method carry capacity
-    public void setcCap(int cCap) {
+    public void setCCap(int cCap) {
         this.cCap = cCap;
     }
 
